@@ -1,0 +1,125 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.flashShop{
+	width: 1226px;
+	height: 438px;
+	margin: 0 auto;
+}
+.flashShop .flashShop-top{
+	width: 1226px;
+	height: 58px;
+	line-height: 58px;
+	font-size: 22px;
+	color: #333;
+	position: relative;
+}
+.flashShop .flashShop-top .more{
+	position: absolute;
+	right: 0;
+	top: 24px;
+}
+.flashShop .flashShop-top .more a{
+	display: block;
+	float: left;
+	text-align: center;
+	width: 24px;
+    height: 16px;
+    padding: 3px 5px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.flashShop .flashShop-bottom{
+	width: 1240px;
+	height: 340px;
+}
+.flashShop .flashShop-bottom .count{
+	width: 234px;
+	height: 340px;
+	float: left;
+	background: rgba(0,0,0,0.02);
+	margin-right: 14px;
+	border-top:1px solid #e53935;
+}
+.flashShop .flashShop-bottom .box{
+	width: 992px;
+	height: 340px;
+	overflow: hidden;
+	position: relative;
+}
+.flashShop .flashShop-bottom ul{
+	/*background: red;*/
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.flashShop .flashShop-bottom ul li{
+	width: 234px;
+	height: 339px;
+	margin-right: 14px;
+	float: left;
+	list-style: none;
+	border-top: 1px solid #000;
+	position: relative;
+	text-align: center;
+}
+.flashShop .flashShop-bottom li .bg{
+	background: rgba(0,0,0,0.02);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+    bottom: 0;
+}
+.flashShop .flashShop-bottom .content img{
+	width: 160px;
+	height: 160px;
+	display: block;
+	margin: 0 auto;
+	padding-top: 39px;
+}
+
+.flashShop .flashShop-bottom .item-1{
+	border-top-color: #ffac13;
+}
+.flashShop .flashShop-bottom .item-2{
+	border-top-color: #83c44e;
+}
+.flashShop .flashShop-bottom .item-3{
+	border-top-color: #2196f3;
+}
+.flashShop .flashShop-bottom .item-4{
+	border-top-color: #e53935;
+}
+.flashShop .flashShop-bottom .item-5{
+	border-top-color: #00c0a5;
+}
+.flashShop .flashShop-bottom .item-6{
+	border-top-color: #ffac13;
+}
+.flashShop .flashShop-bottom .item-7{
+	border-top-color: #83c44e;
+}
+.flashShop .flashShop-bottom .item-8{
+	border-top-color: #2196f3;
+}
+.flashShop .flashShop-bottom .item-9{
+	border-top-color: #e53935;
+}
+.flashShop .flashShop-bottom .item-10{
+	border-top-color: #00c0a5;
+}
+.flashShop .flashShop-bottom .item-11{
+	border-top-color: #ffac13;
+}
+.flashShop .flashShop-bottom .item-12{
+	border-top-color: #83c44e;
+}
+
