@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="shangou.css">
+</head>
+<body>
+	<div class="flashShop" id="wrap">
+		<div class="flashShop-top" id="ft">
+			<p>小米闪购</p>
+			<div class="more">
+				<a id="zuo" href="javascript:void(0)"><</a>
+				<a id="you" href="javascript:void(0)">></a>
+			</div>
+		</div>
+		<div class="flashShop-bottom" id="fb">
+			<div class="count"></div>
+			<div class="box" id="box">
+				<ul>
+					<li class="item-1">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/1.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>1</p>
+						</div>
+					</li>
+					<li class="item-2">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/2.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>2</p>
+						</div>
+					</li>
+					<li class="item-3">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/3.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>3</p>
+						</div>
+					</li>
+					<li class="item-4">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/4.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>4</p>
+						</div>
+					</li>
+					<li class="item-5">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/5.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>5</p>
+						</div>
+					</li>
+					<li class="item-6">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/6.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>6</p>
+						</div>
+					</li>
+					<li class="item-7">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/7.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>7</p>
+						</div>
+					</li>
+					<li class="item-8">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/8.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>8</p>
+						</div>
+					</li>
+					<li class="item-9">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/9.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>9</p>
+						</div>
+					</li>
+					<li class="item-10">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/10.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>10</p>
+						</div>
+					</li>
+					<li class="item-11">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/11.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>11</p>
+						</div>
+					</li>
+					<li class="item-12">
+						<a href="#"><div class="bg"></div></a>
+						<div class="content">
+							<img src="./img/12.jpg" alt="">
+							<h3></h3>
+							<p></p>
+							<p>12</p>
+						</div>
+					</li>
+
+				</ul>	
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function getCss(obj,name){ //obj = wrap(变量)  name = 样式名（left）
+	        if (obj.currentStyle) {
+	            return obj.currentStyle[name];//[name]中的name为变量left
+	        } else{
+	            return getComputedStyle(obj)[name];
+	        }
+		}
+	</script>
+	<script>
+		var oDiv = document.getElementById('wrap');
+		var box = oDiv.getElementsByTagName('div')[4];
+		var oUl = box.getElementsByTagName('ul')[0];
+		var more = oDiv.getElementsByTagName('div')[1];
+		var oBtn1 = more.getElementsByTagName('a')[0];
+		var oBtn2 = more.getElementsByTagName('a')[1];
+		var aLi = oUl.getElementsByTagName('li');
+		var left = getCss(oUl,"left");
+		left = left.replace("px","");
+		var width = getCss(box,"width");
+		width = width.replace("px","");
+		var speed = 16;
+
+		function move(){
+			var timer = setInterval(function(){
+				left-=speed;
+				oUl.style.left = left + "px";
+				if(left == -width || left == -width*2){
+					clearInterval(timer);
+					oUl.style.left = left + "px";
+				}
+			},1);
+		}
+		
+		oBtn2.onclick = function(){
+			if(left == 0 || left == -width){
+				move();
+			}
+		}
+
+		oBtn1.onclick = function(){
+			if(left == -width || left == -width*2){
+				var timer = setInterval(function(){
+				left+=speed;
+				oUl.style.left = left + "px";
+				if(left == 0 || left == -width){
+					clearInterval(timer);
+					oUl.style.left = left + "px";
+				}
+			},1);
+			}
+		}
+
+		// if(left == 0){
+		// 	oBtn1.style.color = "#e0e0e0";
+		// }else{
+		// 	oBtn1.style.color = "#b0b0b0";
+		// }
+	</script>
+</body>
+</html>
